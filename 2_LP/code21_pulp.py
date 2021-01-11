@@ -10,10 +10,9 @@ prob += x1 + 3*x2 <= 9, 'ineq1'
 prob += x1 + x2 <= 4, 'ineq2'
 prob += x1 + x2 <= 6, 'ineq3'
 print(prob)
-prob.solve() 
+prob.solve()
 
 print(LpStatus[prob.status])
 print('Optimal value =', value(prob.objective))
 for v in prob.variables():
     print(v.name, '=', value(v))
-
